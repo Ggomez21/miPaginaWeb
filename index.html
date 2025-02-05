@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi pareja?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+        }
+        .container {
+            margin-top: 50px;   
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #999;
+            color: white;
+            position: absolute;
+        }
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi pareja? ❤️</h1>
+        <img src="chillDeCojones.jpg" alt="Foto especial" class="photo">
+        <p>Eres la persona más especial para mí y quiero compartir este camino contigo. 💕</p>
+        <button class="btn yes" onclick="aceptar()">Sí, acepto ❤️</button>
+        <button class="btn no" onmouseover="moverNo()">No 😢</button>
+    </div>
+    <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! 💖 Te amo 💕");
+        }
+        function moverNo() {
+            let btnNo = document.querySelector('.no');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            btnNo.style.left = `${x}px`;
+            btnNo.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
